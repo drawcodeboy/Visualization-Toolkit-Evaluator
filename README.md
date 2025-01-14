@@ -4,4 +4,4 @@
     * <a href="docs/VERSION_1.0.0.md">v1.0.0 Documentation</a>
 ## functions
 ## To DO
-* metrics 내부 코드 다 버려야 할 듯
+* remove all metrics code...
