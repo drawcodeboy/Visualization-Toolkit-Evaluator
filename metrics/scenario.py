@@ -1,14 +1,18 @@
 from paraview.simple import *
 from .methods import *
 
+from collections import OrderedDict
+
 def draw_data(data_path):
      # (1) File/Open에서 파일열기
-    data, func1_time = load_data(data_path, order=1, show=True)
+    data, func1_time = load_data(data_path, show=True, interact=True)
 
-    total_time = func1_time
-    each_time_li = [func1_time]
+    times = OrderedDict({
+        'Load Data': func1_time,
+        'Total Time': func1_time
+    })
 
-    return total_time, each_time_li
+    return times
 
 # Scenario 1
 def draw_vector_field(data_path):
@@ -55,7 +59,7 @@ def draw_iso_contour(data_path):
     return total_time, each_time_li
 
 # Scenario 3
-def draw_stream_line(data_path, scenartio_subtype=1):
+def draw_stream_line(data_path, scenario_subtype=1):
     # Coloring, Line Parameters, Streamline Parameters
 
     # (1) File/Open에서 파일열기
@@ -65,7 +69,7 @@ def draw_stream_line(data_path, scenartio_subtype=1):
     filter, func2_time = cell_data_to_point_data(data, order=2, show=False)
 
     # (3) Filters/Alphabetical/Stream Tracer
-    filter, func3_time = stream_tracer(data, order=3, show=True if scenartio_subtype == 1 else False,
+    filter, func3_time = stream_tracer(data, order=3, show=True if scenario_subtype == 1 else False,
                                        vectors='vl',
                                        seed_type='Line') # "Line" or "Point Cloud"
     
@@ -74,12 +78,12 @@ def draw_stream_line(data_path, scenartio_subtype=1):
 
     each_time_li = [func1_time, func2_time, func3_time]
 
-    if scenartio_subtype == 2:
+    if scenario_subtype == 2:
         # (4) Filters/Alphabetical/Tube
         filter, func4_time = tube(filter, order=4, show=True)
         total_time += func4_time
         each_time_li.append(func4_time)
-    elif scenartio_subtype == 3:
+    elif scenario_subtype == 3:
         # (4) Filters/Alphabetical/Glyph
         filter, func4_time = glyph(filter, order=4, show=True)
         total_time += func4_time

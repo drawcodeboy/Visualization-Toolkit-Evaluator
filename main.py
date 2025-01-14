@@ -30,4 +30,5 @@ def main(cfg):
 if __name__ == '__main__':
     with open('config.json') as f:
         cfg = json.load(f)
+    cfg['data_path'] = cfg['data_path'].replace(r'\\', '/')
     main(cfg)
