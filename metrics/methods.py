@@ -16,7 +16,10 @@ def load_data(data_path, show=False, interact=False):
 
     # show data in view
     start_time = time.time()
-    runfoamDisplay = Show(data, renderView1, 'UnstructuredGridRepresentation')
+    if show == True:
+        runfoamDisplay = Show(data, renderView1, 'UnstructuredGridRepresentation')
+    else:
+        pass
     elapsed_time = time.time() - start_time
 
     # trace defaults for the display properties.
