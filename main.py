@@ -12,7 +12,7 @@ def main(cfg):
     for count in range(cfg['count']):
         times = load_scenario(cfg['data_path'],
                               cfg['scenario'],
-                              cfg['scenario_subtype'])
+                              cfg[cfg['scenario']])
         
         print(f"==============[{count+1:02d}]==============")
         for key, value in times.items():
@@ -37,5 +37,5 @@ def main(cfg):
 if __name__ == '__main__':
     with open('config.json') as f:
         cfg = json.load(f)
-    cfg['data_path'] = cfg['data_path'].replace(r'\\', '/')
+    cfg['data_path'] = cfg['data_path'].replace('\\', '/')
     main(cfg)

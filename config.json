@@ -1,8 +1,30 @@
 {
-    "data_path": "C:/Users/User/Desktop/Interships/KDW/ETRI_04/data/241003/foam/foam/run.foam",
+    "data_path": "D:/Data/ParaView/Grid300_600_600T.ex2",
 
-    "scenario": 0,
-    "scenario_subtype": 1,
+    "scenario": "Stream Line",
+    "count": 1,
 
-    "count": 1
+    "Load Data":{
+
+    },
+
+    "Vector-Field":{
+
+    },
+
+    "ISO Contour":{
+        "segments": 20 
+    },
+
+    "Stream Line":{
+
+    },
+
+    "Clip": {
+
+    },
+
+    "Slice":{
+
+    }
 }

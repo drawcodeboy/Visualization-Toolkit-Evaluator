@@ -3,3 +3,6 @@
 
 # Virtual Environments
 .venv
+
+# Data Path Notes
+data_path.txt
