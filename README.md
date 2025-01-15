@@ -2,6 +2,9 @@
 * <b>Latest: v1.1.0</b>
     * <a href="docs/VERSION_1.1.0.md">v1.1.0 Documentation</a>
     * <a href="docs/VERSION_1.0.0.md">v1.0.0 Documentation</a>
-## functions
-## To DO
-* remove all metrics code...
+## pvpython docs
+* <a href="https://www.paraview.org/paraview-docs/nightly/python/">LINK</a>
+## Text
+* Rendering is process that visualize data to monitor in Computer Graphics.
+    * Scene is how to rendering
+    * View is result that rendered.

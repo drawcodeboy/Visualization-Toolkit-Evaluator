@@ -26,6 +26,13 @@ def main(cfg):
     print(f"================================")
     for key, value in total_times.items():
         print(f"{key}(Mean): {sum(value)/len(value):.4f}s")
+    
+    # Set Window Size
+    layout1 = GetLayout()
+    layout1.SetSize(1816, 869)
+
+    # Show Window
+    Interact()
 
 if __name__ == '__main__':
     with open('config.json') as f:

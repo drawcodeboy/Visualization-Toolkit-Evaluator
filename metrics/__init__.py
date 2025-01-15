@@ -1,10 +1,12 @@
-from .methods import *
-from .scenario import *
+from .start import start
 
 def load_scenario(data_path:str,
                   scenario:int=0,
                   scenario_subtype:int=0):
     
+    start(data_path)
+    
+    '''
     if scenario == 0:
         return draw_data(data_path)
     elif scenario == 1:
@@ -21,3 +23,6 @@ def load_scenario(data_path:str,
         return perform_data_scenario(data_path, scenario_subtype)
     else:
         raise NotImplementedError(f"We don't support scenario {scenario} yet.")
+    '''
+    times = {}
+    return times
