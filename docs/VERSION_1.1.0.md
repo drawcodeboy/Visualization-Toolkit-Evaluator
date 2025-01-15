@@ -14,25 +14,7 @@
 3. git clone --branch v1.1.0 https://github.com/drawcodeboy/ParaView-Evaluator.git 명령어 실행
 
 4. config.json 설정 데이터 경로, 시나리오 설정
+    데이터 경로 구분자는 무조건 '/'로 되어있어야 함.
 
-5. pvpython main.py <--scenario> <--scenario-subtype> 명령어 실행
-```
-## Set <code>config.json</code>
-```
-Scenario
-0 = Draw Data
-1 = Draw Vector Field
-2 = Draw ISO Contour
-3 = Draw Stream Line
-    3.1 = Stream Tracer
-    3.2 = Stream Tracer -> Tube
-    3.3 = Stream Tracer -> Glyph
-4 = Draw Clip
-5 = Draw Slice
-6 = Perform Data Scenario
-    6.1 = Data Extraction
-    6.2 = Data Time Plot (Data Extraction -> Plot Selection Over Time)
-    6.3 = Data Time Plot (Plot Over Line)
-
-N.M (N = --scenario, M = --scenario-subtype)
+5. pvpython main.py 명령어 실행
 ```
