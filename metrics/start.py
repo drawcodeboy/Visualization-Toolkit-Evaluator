@@ -2,6 +2,18 @@ from paraview.simple import *
 
 import time
 
+def print_data_information(input):
+    UpdatePipeline() # Need to update
+
+    data_info = input.GetDataInformation()
+    print(f"[Data info]")
+    # print(data_info.DataInformation) # No Memory information
+    print(f"\tDataset Type: {data_info.GetDataSetTypeAsString()}")
+    print(f"\t# of Cells: {data_info.GetNumberOfCells()}")
+    print(f"\t# of Points: {data_info.GetNumberOfPoints()}")
+    print(f"\t# of Time Steps: {data_info.GetNumberOfTimeSteps()}")
+    print(f"================================")
+
 def start(data_path):
     '''
         [Docs]
@@ -25,6 +37,9 @@ def start(data_path):
         # create a new 'IOSS Reader'
         input = IOSSReader(registrationName=data_path.split('/')[-1], 
                         FileName=data_path)
+
+    # Print data information
+    print_data_information(input)
 
     # get animation scene
     animationScene1 = GetAnimationScene()

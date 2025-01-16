@@ -11,5 +11,3 @@
 ## To DO
 * Enable Detailed Function
 * Capture Videos that follow Scenario
-* Extract Data information
-* Path Processing
