@@ -48,7 +48,7 @@
 
 [Result]
 (1) Data Rendering Time: 13.7834s
-(2) Vector-Field Rendering Time: Unable to allocate 19440000000 elements of size 8 bytes.
+(2) Vector-Field Rendering Time: Unable to allocate 19440000000 elements of size 8 bytes. (155.52GB)
 (3) ISO Contour Rendering Time: 1.6900s
 (4) Stream Line Rendering Time: 4.0497s
 (5) Clip Rendering Time: 1.4394s

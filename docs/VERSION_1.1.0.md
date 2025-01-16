@@ -4,6 +4,7 @@
     * 더 단순한 모듈화 가능
     * 그래도 Python 외장 라이브러리는 사용 불가능, 시도하려면 <a href="https://discourse.paraview.org/t/how-can-i-install-and-import-other-modules-inside-pvpython/3067">빌드 자체를 새롭게 하면서 추가해야 한다</a>는 말이 있었음.
 2. ParaView 내부 trace 기능을 활용한 코드 및 측정 시간 상세화
+3. 가상 데이터 3개에 대한 실험
 
 ## Install
 ```
