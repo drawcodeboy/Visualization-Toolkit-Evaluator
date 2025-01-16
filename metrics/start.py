@@ -2,6 +2,18 @@ from paraview.simple import *
 
 import time
 
+def read_data(data_path):
+    if data_path.split('/')[-1].endswith('foam'):
+        # create a new 'Open FOAM Reader'
+        input = OpenFOAMReader(registrationName=data_path.split('/')[-1], 
+                                FileName=data_path)
+    elif data_path.split('/')[-1].endswith('ex2'):
+        # create a new 'IOSS Reader'
+        input = IOSSReader(registrationName=data_path.split('/')[-1], 
+                        FileName=data_path)
+    
+    return input
+
 def print_data_information(input):
     UpdatePipeline() # Need to update
 
@@ -12,7 +24,6 @@ def print_data_information(input):
     print(f"\t# of Cells: {data_info.GetNumberOfCells()}")
     print(f"\t# of Points: {data_info.GetNumberOfPoints()}")
     print(f"\t# of Time Steps: {data_info.GetNumberOfTimeSteps()}")
-    print(f"================================")
 
 def start(data_path):
     '''
@@ -27,19 +38,7 @@ def start(data_path):
     #### disable automatic camera reset on 'Show'
     paraview.simple._DisableFirstRenderCameraReset()
 
-    input = None
-
-    if data_path.split('/')[-1].endswith('foam'):
-        # create a new 'Open FOAM Reader'
-        input = OpenFOAMReader(registrationName=data_path.split('/')[-1], 
-                                FileName=data_path)
-    elif data_path.split('/')[-1].endswith('ex2'):
-        # create a new 'IOSS Reader'
-        input = IOSSReader(registrationName=data_path.split('/')[-1], 
-                        FileName=data_path)
-
-    # Print data information
-    print_data_information(input)
+    input = read_data(data_path)
 
     # get animation scene
     animationScene1 = GetAnimationScene()

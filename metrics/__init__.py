@@ -1,4 +1,4 @@
-from .start import start
+from .start import *
 from .methods import *
 
 from typing import Dict
@@ -21,6 +21,13 @@ def load_scenario(data_path:str,
     elif scenario == 'Slice':
         times = draw_slice(input, render_view, scenario_config)
 
-    render_view.Update()
+    if scenario in ['Vector-Field']:
+        render_view.ResetActiveCameraToPositiveZ()
+    elif scenario in ['Stream Line']:
+        render_view.ResetActiveCameraToPositiveX()
+    else:
+        render_view.ApplyIsometricView()
+    
+    render_view.ResetCamera(False, 0.9)
 
     return times

@@ -39,9 +39,10 @@ def draw_iso_contour(input, render_view, config):
     times['ISO Contour Create Time'] = elapsed_time
 
     # Properties modified on contour1
-    contour1.ContourBy = ['POINTS', 'cellind']
+    # contour1.ContourBy = ['POINTS', 'cellind']
+    input.GetDataInformation()
 
-    min_value, max_value = 1.0, 21642450.0
+    min_value, max_value = 0, 17999 # 0, 17999 # 0, 1.77908e+07 # 0, 1.07281e+08
     diff = (max_value-min_value) / (config['segments']-1)
     contour1.Isosurfaces = [min_value + i * diff for i in range(0, config['segments'])]
 
@@ -62,7 +63,7 @@ def draw_stream_line(input, render_view, config):
     # create a new 'Stream Tracer'
     start_time = time.time()
     streamTracer1 = StreamTracer(registrationName='StreamTracer1', Input=input,
-        SeedType='Line')
+        SeedType='Point Cloud')
     elapsed_time = time.time() - start_time
     times['Stream Line Create Time'] = elapsed_time
 
