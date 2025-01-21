@@ -1,9 +1,9 @@
 {
-    "data_path": "D:/Data/ParaView/Grid300_600_600T.ex2",
+    "data_path": "D:/Data/ParaView/Grid200_300_300T.ex2",
 
-    "scenario": "Stream Line",
+    "scenario": "Vector-Field",
     "count": 1,
-    "vis": "Screenshot",
+    "vis": "Interact",
 
     "Load Data":{
 
