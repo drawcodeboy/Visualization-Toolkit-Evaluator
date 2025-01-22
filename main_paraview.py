@@ -40,7 +40,7 @@ def main(cfg):
         # Show Window
         Interact()
     elif cfg['vis'] == 'Screenshot':
-        SaveScreenshot(f"./screenshots/{cfg['data_path'].split('/')[-1]}-{cfg['scenario']}.png")
+        SaveScreenshot(f"./screenshots_paraview/{cfg['data_path'].split('/')[-1]}-{cfg['scenario']}.png")
 
 if __name__ == '__main__':
     with open('config.json') as f:
