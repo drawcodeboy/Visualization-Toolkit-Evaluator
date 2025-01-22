@@ -1,26 +1,11 @@
 {
-    "data_path": "D:/Data/ParaView/Grid20_30_30T.ex2",
+    "data_path": "D:/Data/ParaView/Grid200_300_300T.ex2",
 
-    "scenario": "Load Data",
+    "scenario": "Vector-Field",
     "count": 1,
     "vis": "Screenshot",
 
-    "Load Data":{
-
-    },
-    "Vector-Field":{
-
-    },
     "ISO Contour":{
         "segments": 10
-    },
-    "Stream Line":{
-
-    },
-    "Clip": {
-
-    },
-    "Slice":{
-
     }
 }

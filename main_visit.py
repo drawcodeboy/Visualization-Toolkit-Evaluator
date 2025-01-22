@@ -9,12 +9,7 @@ import json, os
 def main(cfg):
     OpenDatabase(f"localhost:{cfg['data_path']}")
 
-    if cfg['scenario'] == 'Load Data':
-        visit_load_data()
-    elif cfg['scenario'] == 'Vector-Field':
-        visit_vector_field(cfg['data_path'])
-    else:
-        pass
+    load_scenario(cfg)
 
     if not os.path.exists('./screenshots_visit'):
         os.mkdir('./screenshots_visit')
