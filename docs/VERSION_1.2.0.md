@@ -5,3 +5,8 @@
 <code>visit_commands.py</code>에 모두 저장해둠
 visit -cli를 통해 접속해서 명령어 실행할 것
 -nowin 유무 차이에 따라 시간 다른지도 봐야한다.
+```
+# Should modify config.json 'vis', 'Interact' or 'Screenshot'
+visit -cli -s main_visit.py # no Screenshots
+visit -cli -s -nowin main_visit.py # Screenshots
+```
