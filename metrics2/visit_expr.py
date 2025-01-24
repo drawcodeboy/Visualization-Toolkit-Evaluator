@@ -22,7 +22,7 @@ def visit_vector_field(data_path):
     p.glyphLocation=1
     p.nVectors=5000
     p.autoScale=0
-    p.scale= 1 if data_path == "D:/Data/ParaView/Grid20_30_30T.ex2" else 10
+    p.scale= 1 if data_path == "D:/Data/ParaView/Grid20_30_30T.ex2" else 5
     p.lineStem=0
     SetPlotOptions(p)
     start_time = time.time()
@@ -59,13 +59,13 @@ def visit_stream_line():
 
 x_half = {
     'Grid20_30_30T.ex2': [1.5, -15.5],
-    'Grid200_300_300T.ex2': [15, 0],
-    'Grid300_600_600T.ex2': [30, 0]
+    'Grid200_300_300T.ex2': [15., 0],
+    'Grid300_600_600T.ex2': [30., 30.]
 }
 
 def visit_clip(data_path):
     AddPlot('Mesh', 'Mesh')
-    DrawPlots()
+    # DrawPlots()
 
     AddOperator('Clip')
     c = ClipAttributes()

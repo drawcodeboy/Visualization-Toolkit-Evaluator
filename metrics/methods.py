@@ -42,7 +42,7 @@ def draw_iso_contour(input, render_view, config):
     # contour1.ContourBy = ['POINTS', 'cellind']
     input.GetDataInformation()
 
-    min_value, max_value = 0, 17999 # 0, 17999 # 0, 1.77908e+07 # 0, 1.07281e+08
+    min_value, max_value = 0, 1.07281e+08 # 0, 17999 # 0, 1.77908e+07 # 0, 1.07281e+08
     diff = (max_value-min_value) / (config['segments']-1)
     contour1.Isosurfaces = [min_value + i * diff for i in range(0, config['segments'])]
 

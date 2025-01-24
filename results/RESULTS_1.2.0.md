@@ -11,7 +11,7 @@
     # of Time Steps: 20
 
 [ParaView Result]
-(1) Data Rendering Time: 0.0870s 
+(1) Data Rendering Time: 0.0830s 
 (2) Vector-Field Rendering Time: 0.1130s
 (3) ISO Contour Rendering Time: 0.0990s
 (4) Stream Line Rendering Time: 0.1040s
@@ -45,11 +45,11 @@
 (6) Slice Rendering Time: 0.1340s
 
 [VisIT Result]
-(1) Data Rendering Time: 9.3433s
-(2) Vector-Field Rendering Time: 21.4510s
+(1) Data Rendering Time: 8.6898s
+(2) Vector-Field Rendering Time: 15.3072s
 (3) ISO Contour Rendering Time: 5.5774s
 (4) Stream Line Rendering Time: No Function
-(5) Clip Rendering Time: 6.4279s
+(5) Clip Rendering Time: 6.3090s
 (6) Slice Rendering Time: 1.2785s
 ```
 * * * 

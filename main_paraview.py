@@ -34,7 +34,7 @@ def main(cfg):
 
     # Set Window Size
     layout1 = GetLayout()
-    layout1.SetSize(1816, 869)
+    layout1.SetSize(640, 640)
 
     if cfg['vis'] == 'Interact':
         # Show Window
